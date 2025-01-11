@@ -21,7 +21,7 @@ app.use(bodyParser.json()); // Middleware to parse JSON body in POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile("/web dev/mine/self focused store/views/index.html");
+  res.sendFile("/web dev/mine/self focused store/index.html");
 });
 app.get("/login", (req, res) => {
   res.sendFile("/web dev/mine/self focused store/views/login.html");

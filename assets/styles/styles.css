@@ -1,12 +1,13 @@
 html body{
-    background: rgb(151, 211, 218);
+    background: rgb(183, 228, 234);
     color:white;
 }
 .nav-link{
-    color: rgb(255, 255, 255) !important;
+    color: rgb(3, 72, 82)  !important;
     border: 1px solid #000000; 
 }
 .active{
+    color: white !important;
     background-color: rgb(3, 72, 82) !important;
     border-bottom: 3px solid rgb(255, 255, 255);
     border-radius: 0 !important;
@@ -37,7 +38,6 @@ margin-top: 20px ;
     border-radius: 5%;
     margin-right: 0.5px;
     overflow: hidden;
-    transition: transform 0.3s ease;
 }
 .feature{
     height: 255px;
@@ -50,7 +50,7 @@ margin-top: 20px ;
 }
 .p:hover{
     opacity:0.8;
-    box-shadow: 2px;
+    
 }
 li{
     list-style: none;
