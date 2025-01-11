@@ -1,0 +1,97 @@
+html body{
+    background: rgb(151, 211, 218);
+    color:white;
+}
+.nav-link{
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid #000000; 
+}
+.active{
+    background-color: rgb(3, 72, 82) !important;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-radius: 0 !important;
+}
+.nav-link:hover{
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-radius: 0 !important;
+}
+.slideshow{
+    position: relative;
+    width: 100%;
+  margin-bottom: 20px;
+  height: 90vh;
+}
+.slide{
+    position: absolute;
+    opacity:0;
+    width:100%;
+}
+.slide:first-child{
+    opacity: 1;
+}
+.special{
+margin-top: 20px ;
+    height: 355px;
+    width:335px !important;
+    border:2px solid black;
+    border-radius: 5%;
+    margin-right: 0.5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.feature{
+    height: 255px;
+    width:300px !important;
+    border:2px solid black;
+    border-radius: 5%;
+    margin-right: 0.5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.p:hover{
+    opacity:0.8;
+    box-shadow: 2px;
+}
+li{
+    list-style: none;
+    line-height: 0.2;
+}
+
+.login-form{
+    border:2px solid black;
+    margin-right: 0.5px;
+    width: 350px !important;
+}
+.register-form{
+    border:2px solid black;
+    margin-right: 0.5px;
+    width: 350px !important;
+}
+.sblr{
+    display: flex;
+}
+.front{
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    position: absolute;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.back{
+    position: relative;
+    bottom: 0;
+    left:0;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(100%);
+}
+.pro:hover .front{
+    opacity:0;
+    transform: translateY(-100%);
+}
+.pro:hover .back{
+    opacity:1;
+    transform: translateY(0);
+}
