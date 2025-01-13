@@ -15,9 +15,9 @@ const db = new pg.Client({
 });
 db.connect();
 
-app.use(express.static("assets"));
+app.use(express.static("./assets"));
 app.use(express.static("router"));
-app.use(bodyParser.json()); // Middleware to parse JSON body in POST requests
+app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
@@ -25,6 +25,26 @@ app.get("/", (req, res) => {
 });
 app.get("/login", (req, res) => {
   res.sendFile("/web dev/mine/self focused store/views/login.html");
+});
+app.get("/categories", (req, res) => {
+  res.sendFile("/web dev/mine/self focused store/views/categories.html");
+});
+app.get("/wishlist", (req, res) => {
+  res.sendFile("/web dev/mine/self focused store/views/wishlist.html");
+});
+app.get("/cart", (req, res) => {
+  res.sendFile("/web dev/mine/self focused store/views/cart.html");
+});
+app.get('/products/:category', async(req, res) =>{
+  const c = req.params;
+  const cid=c.category;
+  try{
+    const result =await db.query('select * from product where category = $1', [cid]);
+    
+    res.json(result.rows);
+  }catch(err){
+    res.status(500).json({error: err.message});
+  }
 });
 
 // Get all products from the database
