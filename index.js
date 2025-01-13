@@ -15,9 +15,9 @@ const db = new pg.Client({
 });
 db.connect();
 
-app.use(express.static("./assets"));
+app.use(express.static("assets"));
 app.use(express.static("router"));
-app.use(bodyParser.json()); 
+app.use(bodyParser.json()); // Middleware to parse JSON body in POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
